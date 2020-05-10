@@ -24,7 +24,10 @@ def deal(data):
 if __name__ == "__main__":
     directory = os.path.join(new_directory,file_name.split("/")[-1].split(".")[0])
     print (directory)
-    os.mkdir(directory)
+    try:    
+        os.mkdir(directory)
+    except:
+        pass
     for line in open(file_name):
         line = line.strip()
         data = json.loads(line)

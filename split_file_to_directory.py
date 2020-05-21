@@ -19,7 +19,7 @@ def deal(data):
     #    start_logits[str(i)] = [data["span_id"][i],tokens[i],logit]
     #    end_logits[str(i)] = data["end_logits"][i]
 
-    return f, {"start_logits":start_logits,"end_logits":end_logits,"ori_tokens":data["ori_tokens"],"tokens":data["tokens"],"span_id":data["span_id"]}
+    return f, {"start_logits":data["start_logits"],"end_logits":data["end_logits"],"ori_tokens":data["ori_tokens"],"tokens":data["tokens"],"span_id":data["span_id"]}
 
 if __name__ == "__main__":
     directory = os.path.join(new_directory,file_name.split("/")[-1].split(".")[0])
